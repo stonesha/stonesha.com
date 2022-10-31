@@ -1,0 +1,38 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import ProjectCard from "@/components/ProjectCard.astro";
+---
+
+<Layout title="Stone Sha - Projects">
+  <div class="flex flex-col space-y-5 w-full my-4">
+    <h2
+      class="text-xl md:text-3xl font-medium text-shadow-sm dark:text-gray-200"
+    >
+      Projects
+    </h2>
+
+    <ProjectCard
+      title="cat-scroller"
+      description="Web application for viewing cat pictures from reddit. Fully virtualized so you can scroll as far as possible without lagging it."
+      repo_url="https://github.com/stonesha/cat-scroller"
+    />
+
+    <ProjectCard
+      title="cat-chat"
+      description="Web app to chat with others in a lobby. Written with an Elixir backend to support (theoretically) millions of clients performatively."
+      repo_url="https://github.com/stonesha/cat-chat"
+    />
+
+    <ProjectCard
+      title="notez"
+      description="Small note-keeping webapp. Using Firebase to authenticate users and store notes."
+      repo_url="https://github.com/stonesha/notez"
+    />
+
+    <ProjectCard
+      title="utils"
+      description="General utilities for personal and dev purposes. Nothing too special."
+      repo_url="https://github.com/stonesha/utils"
+    />
+  </div>
+</Layout>

@@ -1,0 +1,70 @@
+---
+const { title, company, time_period, location, img_src, company_url } =
+  Astro.props;
+---
+
+<div
+  class="p-2 rounded-md w-full border-2 border-gray-100 shadow-md bg-white dark:bg-gray-600 dark:border-gray-700 dark:shadow-gray-700"
+>
+  <div class="flex flex-row justify-between space-x-2 p-2">
+    <div class="w-3/4">
+      <div class="flex flex-row">
+        <a
+          href={company_url}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hover:underline"
+        >
+          <h3
+            class="text-sm sm:text-lg md:text-xl text-black font-medium truncate dark:text-gray-200"
+          >
+            {title}
+          </h3>
+        </a>
+        <a
+          href={company_url}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex flex-col align-middle justify-center cursor-pointer ml-1"
+        >
+          <svg
+            class="w-3.5 h-3.5 md:w-4 md:h-4 text-black dark:text-gray-200"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            ><path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
+            ></path>
+          </svg>
+        </a>
+      </div>
+      <hr class="my-1" />
+      <h4
+        class="text-xs sm:text-sm md:text-lg text-black font-light dark:text-gray-200"
+      >
+        {company}
+      </h4>
+      <h5
+        class="text-xs sm:text-sm md:text-lg text-black font-light dark:text-gray-200"
+      >
+        {time_period}
+      </h5>
+      <h6
+        class="text-xs sm:text-sm md:text-lg text-black font-light dark:text-gray-200"
+      >
+        {location}
+      </h6>
+    </div>
+    <div class="flex flex-col align-middle justify-center">
+      <img
+        alt="{company} logo"
+        src={img_src}
+        class="w-16 h-16 md:w-28 md:h-28 mr-2 rounded-md"
+      />
+    </div>
+  </div>
+</div>

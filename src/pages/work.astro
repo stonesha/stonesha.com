@@ -1,0 +1,47 @@
+---
+import WorkCard from "@/components/WorkCard.astro";
+import Layout from "@/layouts/Layout.astro";
+---
+
+<Layout title="Stone Sha - Work"
+  ><div class="flex flex-col space-y-5 w-full my-4">
+    <h2
+      class="text-xl md:text-3xl font-medium text-shadow-sm dark:text-gray-200"
+    >
+      Work
+    </h2>
+
+    <WorkCard
+      title="Application Developer"
+      company="Armstrong Relocation"
+      time_period="Oct 2021 - Present"
+      location="Remote"
+      img_src="/armstrong_relocation.jpg"
+      company_url="https://www.armstrongrelocation.com/"
+    />
+    <WorkCard
+      title="Web Developer"
+      company="D4 Advanced Media"
+      time_period="Jan 2021 - Jul 2021"
+      location="Reno, Nevada"
+      img_src="/d4am.jpg"
+      company_url="https://www.d4mc.com/"
+    />
+    <WorkCard
+      title="Online Instructor"
+      company="iD Tech Camps"
+      time_period="Jul 2020 - Jan 2021"
+      location="Remote"
+      img_src="/id_tech.jpg"
+      company_url="https://www.idtech.com/"
+    />
+    <WorkCard
+      title="IT Technician"
+      company="Cathay Medical Center"
+      time_period="Jan 2013 - Jan 2017"
+      location="Las Vegas, Nevada"
+      img_src="/cathay.png"
+      company_url="https://www.yelp.com/biz/cathay-medical-center-las-vegas"
+    />
+  </div>
+</Layout>
