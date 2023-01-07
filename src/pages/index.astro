@@ -1,5 +1,7 @@
 ---
 import Layout from "@/layouts/Layout.astro";
+import ProjectCard from "@/components/ProjectCard.astro";
+import WorkCard from "@/components/WorkCard.astro";
 ---
 
 <Layout title="Stone Sha - Full Stack Developer">
@@ -20,6 +22,78 @@ import Layout from "@/layouts/Layout.astro";
       alt="profile"
       src="/profile.png"
       class="rounded-full w-32 h-32 md:w-64 md:h-64 object-cover border-2 border-gray-200 shadow-lg"
+    />
+  </div>
+
+  <div class="flex flex-col space-y-5 w-full my-4">
+    <h2
+      class="text-xl md:text-3xl font-medium text-shadow-sm dark:text-gray-200"
+    >
+      Projects
+    </h2>
+
+    <ProjectCard
+      title="cat-scroller"
+      description="Web application for viewing cat pictures from reddit. Fully virtualized so you can scroll as far as possible without lagging it. Written with Next.js."
+      repo_url="https://github.com/stonesha/cat-scroller"
+    />
+
+    <ProjectCard
+      title="cat-chat"
+      description="Web app to chat with others in a lobby. Written with an Elixir backend to support (theoretically) millions of clients performatively. Uses a Vite React frontend with websockets connecting the two."
+      repo_url="https://github.com/stonesha/cat-chat"
+    />
+
+    <ProjectCard
+      title="cat-todo"
+      description="Over-engineered todo list web app. Written with Next.js. Uses tRPC for typesafe APIs, zod for schema validation, prisma for database operations among many more."
+      repo_url="https://github.com/stonesha/cat-todo"
+    />
+
+    <ProjectCard
+      title="utils"
+      description="General utilities for personal and dev purposes. Nothing too special. Written with SvelteKit."
+      repo_url="https://github.com/stonesha/utils"
+    />
+  </div>
+  <div class="flex flex-col space-y-5 w-full my-4">
+    <h2
+      class="text-xl md:text-3xl font-medium text-shadow-sm dark:text-gray-200"
+    >
+      Work
+    </h2>
+
+    <WorkCard
+      title="Application Developer"
+      company="Armstrong Relocation"
+      time_period="Oct 2021 - Present"
+      location="Remote"
+      img_src="/armstrong_relocation.jpg"
+      company_url="https://www.armstrongrelocation.com/"
+    />
+    <WorkCard
+      title="Web Developer"
+      company="D4 Advanced Media"
+      time_period="Jan 2021 - Jul 2021"
+      location="Reno, Nevada"
+      img_src="/d4am.jpg"
+      company_url="https://www.d4mc.com/"
+    />
+    <WorkCard
+      title="Online Instructor"
+      company="iD Tech Camps"
+      time_period="Jul 2020 - Jan 2021"
+      location="Remote"
+      img_src="/id_tech.jpg"
+      company_url="https://www.idtech.com/"
+    />
+    <WorkCard
+      title="IT Technician"
+      company="Cathay Medical Center"
+      time_period="Jan 2013 - Jan 2017"
+      location="Las Vegas, Nevada"
+      img_src="/cathay.png"
+      company_url="https://www.yelp.com/biz/cathay-medical-center-las-vegas"
     />
   </div>
 </Layout>
