@@ -7,6 +7,10 @@ import tailwind from "@astrojs/tailwind";
 import compress from "astro-compress";
 
 // https://astro.build/config
+import sitemap from "@astrojs/sitemap";
+
+// https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), compress()]
+  site: "https://stonesha.com",
+  integrations: [tailwind(), compress(), sitemap()],
 });
