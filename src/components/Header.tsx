@@ -40,8 +40,8 @@ function NavItem({
 function DesktopNavigation(props: React.ComponentPropsWithoutRef<"nav">) {
   const routes = [
     { href: "/about", label: "About" },
-    { href: "/about", label: "Projects" },
-    { href: "/about", label: "Work" },
+    { href: "/projects", label: "Projects" },
+    { href: "/work", label: "Work" },
   ];
   return (
     <nav {...props}>
@@ -81,13 +81,15 @@ function ThemeToggle() {
 function Avatar() {
   // 5:4 ratio
   return (
-    <Image
-      width={50}
-      height={40}
-      src="/profile.png"
-      alt="morris profile pic :3"
-      className="rounded-b-full object-cover"
-    />
+    <Link href="/" aria-label="Home" className="pointer-events-auto">
+      <Image
+        width={50}
+        height={40}
+        src="/profile.png"
+        alt="morris profile pic :3"
+        className="rounded-b-full object-cover"
+      />
+    </Link>
   );
 }
 
