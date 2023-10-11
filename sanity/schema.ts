@@ -10,6 +10,16 @@ const morris_pic = {
       type: "string",
       title: "Image Source",
     },
+    {
+      name: "alt",
+      type: "string",
+      title: "Alt Text",
+    },
+    {
+      name: "id",
+      type: "number",
+      title: "Picture ID",
+    },
   ],
 };
 
