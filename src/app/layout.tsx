@@ -7,7 +7,7 @@ import { Layout } from "~/components/Layout";
 export const metadata: Metadata = {
   title: {
     template: "%s - Stone Sha",
-    default: "Stone Sha - Fullstack developer and cat lover",
+    default: "Stone Sha - Fullstack Developer",
   },
   description:
     "I'm Stone, a software developer based in Las Vegas, Nevada. I'm currently working at Armstrong Relocation as an Application Developer.",
