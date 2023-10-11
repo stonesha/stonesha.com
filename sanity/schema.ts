@@ -6,14 +6,14 @@ const morris_pic = {
   title: "Morris Picture",
   fields: [
     {
-      name: "src",
-      type: "string",
-      title: "Image Source",
-    },
-    {
       name: "alt",
       type: "string",
       title: "Alt Text",
+    },
+    {
+      name: "src",
+      type: "string",
+      title: "Image Source",
     },
     {
       name: "id",
