@@ -19,11 +19,6 @@ export const metadata: Metadata = {
   },
   description:
     "I'm Stone, a software developer based in Las Vegas, Nevada. I'm currently working at Armstrong Relocation as an Application Developer.",
-  alternates: {
-    types: {
-      "application/rss+xml": `${process.env.NEXT_PUBLIC_SITE_URL}/feed.xml`,
-    },
-  },
 };
 
 export default function RootLayout({
