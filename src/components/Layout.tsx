@@ -1,4 +1,4 @@
-import { Header } from "~/components/Header";
+import Header from "~/components/header";
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
