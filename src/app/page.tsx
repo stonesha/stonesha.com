@@ -1,6 +1,16 @@
 import Link from "next/link";
+import { client } from "~/utils/sanity/client";
+import type { MorrisPic } from "~/utils/sanity/schema/morris_pic";
+import clsx from "clsx";
+import Image from "next/image";
+import { urlFor } from "~/utils/sanity/builder";
 
-export default function Home() {
+export default async function Home() {
+  const rotations = ["rotate-3", "-rotate-3"];
+  const morris_pics = await client.fetch<MorrisPic[]>(
+    `*[_type == "morris-pic"]`
+  );
+
   return (
     <div>
       <div className="max-w-3xl">
@@ -8,9 +18,9 @@ export default function Home() {
           Fullstack developer and cat lover.
         </p>
         <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-          I&apos;m Stone, a software developer and cat lover based in Las Vegas,
-          Nevada. I&apos;m currently working at The Armstrong Company as an
-          Application Developer. I also play video games sometimes.
+          I&apos;m Stone Sha, a software developer and cat lover based in Las
+          Vegas, Nevada. I&apos;m currently working at The Armstrong Company as
+          an Application Developer. I also play video games sometimes.
         </p>
         <div className="mt-6 flex gap-6">
           <Link
@@ -43,6 +53,32 @@ export default function Home() {
               <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
             </svg>
           </Link>
+        </div>
+      </div>
+      <div className="mt-16 sm:mt-20">
+        <p className="text-xl font-medium tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-3xl mb-4">
+          Here are some Morris pics
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 place-items-center gap-5 overflow-hidden py-4 sm:gap-8">
+          {morris_pics.map((morris_pic) => {
+            const random_index = Math.round(Math.random());
+            return (
+              <div
+                key={morris_pic.id}
+                className={clsx(
+                  "relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800 sm:w-52 sm:rounded-2xl",
+                  rotations[random_index]
+                )}
+              >
+                <Image
+                  src={urlFor(morris_pic.src).width(300).height(300).url()}
+                  alt={morris_pic.alt}
+                  className="absolute inset-0 h-full w-full object-cover"
+                  fill
+                />
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>

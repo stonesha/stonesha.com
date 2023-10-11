@@ -21,4 +21,15 @@ const morris_pic = {
   ],
 };
 
+export type MorrisPic = {
+  _id: string;
+  id: number;
+  _updatedAt: string;
+  src: string;
+  _createdAt: string;
+  _rev: string;
+  _type: "morris-pic";
+  alt: string;
+};
+
 export default morris_pic;
