@@ -87,7 +87,8 @@ function Avatar() {
         height={40}
         src="/profile.png"
         alt="morris profile pic :3"
-        className="rounded-b-full object-cover"
+        className="rounded-b-full object-cover h-auto w-auto"
+        priority
       />
     </Link>
   );
