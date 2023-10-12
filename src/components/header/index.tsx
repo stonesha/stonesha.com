@@ -1,6 +1,7 @@
 import Avatar from "~/components/header/Avatar";
 import DesktopNavigation from "~/components/header/DesktopNavigation";
 import ThemeToggle from "~/components/header/ThemeToggle";
+import MobileNavigation from "~/components/header/MobileNavigation";
 
 export default function Header() {
   const routes = [
@@ -12,6 +13,7 @@ export default function Header() {
       <div className="flex mx-auto max-w-2xl md:max-w-5xl justify-between">
         <Avatar />
         <DesktopNavigation routes={routes} />
+        <MobileNavigation routes={routes} />
         <ThemeToggle />
       </div>
     </header>
