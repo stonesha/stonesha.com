@@ -19,8 +19,8 @@ export default async function Projects() {
         </h1>
         <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
           Various projects I&apos;ve made for fun or learning that I&apos;ve
-          abandoned for one reason or another. They&apos;re open-source repos
-          sit on Github if you want to take a look. Ignore my naming scheme,
+          abandoned for one reason or another. The repos sit on Github and are
+          open-source if you want to take a look. Ignore my naming scheme,
           naming things are hard.
         </p>
       </div>
