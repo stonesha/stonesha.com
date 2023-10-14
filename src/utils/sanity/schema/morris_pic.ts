@@ -1,3 +1,5 @@
+import type { BaseSchema } from "~/utils/sanity/schema";
+
 const morris_pic = {
   name: "morris-pic",
   type: "document",
@@ -21,13 +23,9 @@ const morris_pic = {
   ],
 };
 
-export type MorrisPic = {
-  _id: string;
+export type MorrisPic = BaseSchema & {
   id: number;
-  _updatedAt: string;
   src: string;
-  _createdAt: string;
-  _rev: string;
   _type: "morris-pic";
   alt: string;
 };
