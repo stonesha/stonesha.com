@@ -30,10 +30,10 @@ const project = {
 };
 
 export type Project = BaseSchema & {
-  _id: string;
-  _updatedAt: string;
-  _createdAt: string;
-  _rev: string;
+  description: string;
+  title: string;
+  tags: string[];
+  github_url: string;
   _type: "project";
 };
 
