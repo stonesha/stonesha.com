@@ -12,7 +12,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Header />
         <main className="flex-auto">
           <div className="mx-auto w-full px-5 lg:px-20 md:max-w-2xl lg:max-w-5xl xl:px-0">
-            {children}
+            <div className="sm:mt-16">{children}</div>
           </div>
         </main>
       </div>
