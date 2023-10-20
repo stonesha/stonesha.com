@@ -26,9 +26,9 @@ export default async function Work() {
           Places I&apos;ve worked at
         </h1>
         <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-          These are the places I&apos;ve worked at professionaly. Whether it was
-          writing code or something else. Feel free to read through and get an
-          idea of my experience and skills.
+          These are the places I&apos;ve worked at professionally. Whether it
+          was writing code or something else. Feel free to read through and get
+          an idea of my experience and skills.
         </p>
       </div>
       <div className="space-y-20 mt-10">
