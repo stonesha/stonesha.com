@@ -9,7 +9,9 @@ export const metadata: Metadata = {
 };
 
 export default async function Work() {
-  const workplaces = await client.fetch<Workplace[]>(`*[_type == "workplace"]`);
+  const workplaces = await client.fetch<Workplace[]>(
+    `*[_type == "workplace"] | order(end_date desc)`
+  );
   return (
     <>
       <div className="max-w-2xl">
