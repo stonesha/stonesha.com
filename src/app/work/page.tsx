@@ -8,17 +8,8 @@ export const metadata: Metadata = {
   description: "Places I've worked at, coding or not.",
 };
 
-type WorkplaceWithLogo = Workplace & {
-  logo_url: string;
-};
-
 export default async function Work() {
-  const workplaces = await client.fetch<
-    WorkplaceWithLogo[]
-  >(`*[_type == "workplace"]{
-    ...,
-    "logo_url": logo.asset->url
-  }`);
+  const workplaces = await client.fetch<Workplace[]>(`*[_type == "workplace"]`);
   return (
     <>
       <div className="max-w-2xl">
