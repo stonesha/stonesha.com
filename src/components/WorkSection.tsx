@@ -4,12 +4,14 @@ export function WorkSection({
   description,
   start_date,
   end_date,
+  current,
 }: {
   skills: string[];
   name: string;
   description: string;
   start_date: string;
   end_date: string;
+  current: boolean;
 }) {
   return (
     <section className="md:border-l md:border-zinc-100 md:pl-6 md:dark:border-zinc-700/40">
@@ -20,7 +22,8 @@ export function WorkSection({
               {name}
             </h2>
             <p className="text-sm text-zinc-600 dark:text-zinc-400">
-              {start_date.slice(0, -3)} - {end_date.slice(0, -3)}
+              {start_date.slice(0, -3)} -{" "}
+              {current ? "Present" : end_date.slice(0, -3)}
             </p>
           </div>
           <p className="text-sm text-zinc-600 dark:text-zinc-400">

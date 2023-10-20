@@ -21,6 +21,11 @@ const workplace = {
       title: "End Date",
     },
     {
+      name: "current",
+      type: "boolean",
+      title: "Currently Working There?",
+    },
+    {
       name: "description",
       type: "string",
       title: "Workplace Description",
@@ -47,6 +52,7 @@ export type Workplace = BaseSchema & {
   tags: string[];
   start_date: string;
   end_date: string;
+  current: boolean;
   _type: "workplace";
 };
 
