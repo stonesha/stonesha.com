@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     default: "Stone Sha - Fullstack Developer",
   },
   description:
-    "I'm Stone, a software developer based in Las Vegas, Nevada. I'm currently working at Armstrong Relocation as an Application Developer.",
+    "I'm Stone, a software developer based in Las Vegas, Nevada. I'm currently working at The Armstrong Company as an Application Developer.",
 };
 
 export default function RootLayout({
