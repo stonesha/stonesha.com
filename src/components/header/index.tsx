@@ -11,7 +11,7 @@ export default function Header() {
     { href: "/work", label: "Work" },
   ];
   return (
-    <header className="p-4">
+    <header className="p-4 mt-4">
       <div className="flex mx-auto max-w-2xl md:max-w-5xl justify-between">
         <Avatar />
         <DesktopNavigation routes={routes} />
