@@ -1,6 +1,6 @@
 "use client";
 
-import { CodeBlock, dracula } from "react-code-blocks";
+import { CopyBlock, dracula } from "react-code-blocks";
 import type { Snippet } from "~/utils/sanity/schema/snippet";
 import { Disclosure, Transition } from "@headlessui/react";
 import { ChevronRightIcon } from "@heroicons/react/20/solid";
@@ -26,11 +26,14 @@ export function CustomCodeBlock(snippet: Snippet) {
             leaveTo="transform scale-95 opacity-0"
           >
             <Disclosure.Panel>
-              <CodeBlock
-                text={snippet.code.code}
-                language={snippet.code.language}
-                showLineNumbers
-                theme={dracula}
+              <CopyBlock
+                {...{
+                  language: snippet.code.language,
+                  showLineNumbers: true,
+                  text: snippet.code.code,
+                  theme: dracula,
+                  codeBlock: true,
+                }}
               />
             </Disclosure.Panel>
           </Transition>
