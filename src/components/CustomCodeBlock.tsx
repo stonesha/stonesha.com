@@ -26,9 +26,14 @@ export function CustomCodeBlock(snippet: Snippet) {
            hover:bg-zinc-200 mb-1 items-center dark:text-zinc-100 dark:bg-zinc-800/50"
           >
             {snippet.title}
-            <ChevronRightIcon
-              className={`${open ? "rotate-90 transform" : ""} w-8 h-8`}
-            />
+            <div className="flex flex-row space-x-1 items-center">
+              <span className="rounded-md my-1 inline-flex items-center bg-gray-50 dark:bg-zinc-800 px-2 py-1 text-sm font-medium text-zinc-700 dark:text-zinc-400 ring-1 ring-inset ring-gray-600/20 group-hover:ring-teal-600/20">
+                {snippet.code.language}
+              </span>
+              <ChevronRightIcon
+                className={`${open ? "rotate-90 transform" : ""} w-8 h-8`}
+              />
+            </div>
           </Disclosure.Button>
 
           <Transition
