@@ -74,6 +74,7 @@ export default async function Home() {
                   src={urlFor(morris_pic.src).width(300).height(300).url()}
                   alt={morris_pic.alt}
                   className="absolute inset-0 h-full w-full object-cover"
+                  sizes="300px, 300px"
                   fill
                 />
               </div>
