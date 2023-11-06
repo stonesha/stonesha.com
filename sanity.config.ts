@@ -5,6 +5,7 @@ import { media } from "sanity-plugin-media";
 import { visionTool } from "@sanity/vision";
 import { defineConfig } from "sanity";
 import { deskTool } from "sanity/desk";
+import { codeInput } from "@sanity/code-input";
 
 import schema from "~/utils/sanity/schema";
 
@@ -22,6 +23,19 @@ export default defineConfig({
     visionTool({
       defaultApiVersion:
         process.env.NEXT_PUBLIC_SANITY_API_VERSION || "2023-10-11",
+    }),
+    codeInput({
+      codeModes: [
+        {
+          name: "rust",
+          loader: () =>
+            import("@codemirror/lang-rust").then(({ rust }) => rust()),
+        },
+        {
+          name: "sql",
+          loader: () => import("@codemirror/lang-sql").then(({ sql }) => sql()),
+        },
+      ],
     }),
   ],
 });

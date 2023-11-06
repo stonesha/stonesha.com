@@ -6,7 +6,7 @@ import MobileNavigation from "~/components/header/MobileNavigation";
 export default function Header() {
   const routes = [
     { href: "/", label: "Home" },
-    { href: "/articles", label: "Articles" },
+    { href: "/snippets", label: "Snippets" },
     { href: "/projects", label: "Projects" },
     { href: "/work", label: "Work" },
   ];
