@@ -9,7 +9,9 @@ export const metadata: Metadata = {
 };
 
 export default async function Projects() {
-  const projects = await client.fetch<Project[]>(`*[_type == "project"]`);
+  const projects = await client.fetch<Project[]>(`*[_type == "project"]`, {
+    cache: "no-store",
+  });
 
   return (
     <div>

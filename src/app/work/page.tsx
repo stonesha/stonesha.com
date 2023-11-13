@@ -10,7 +10,10 @@ export const metadata: Metadata = {
 
 export default async function Work() {
   const workplaces = await client.fetch<Workplace[]>(
-    `*[_type == "workplace"] | order(end_date desc)`
+    `*[_type == "workplace"] | order(end_date desc)`,
+    {
+      cache: "no-store",
+    }
   );
   return (
     <>

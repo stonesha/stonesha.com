@@ -10,7 +10,9 @@ export const metadata: Metadata = {
 };
 
 export default async function Snippets() {
-  const snippets = await client.fetch<Snippet[]>(`*[_type == "snippet"]`);
+  const snippets = await client.fetch<Snippet[]>(`*[_type == "snippet"]`, {
+    cache: "no-store",
+  });
   return (
     <>
       <div className="max-w-2xl">
