@@ -57,7 +57,7 @@
 
 	<div class="space-y-4">
 		<div>
-			<p class="text-xl font-bold tracking-tight">Lead Software Engineer</p>
+			<p class="text-xl font-bold tracking-tight">The Armstrong Company | Lead Software Engineer</p>
 			<p class="text-sm font-thin tracking-wide">October 2021 - Remote</p>
 			<ul class="list-disc">
 				<li>Developed and implemented features using PHP for multiple WordPress websites</li>
